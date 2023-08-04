@@ -29,16 +29,16 @@ pipeline{
 
     post{
         always{
-            echo " Kita akan selalu bertemu"
+            echo "Kita akan selalu bertemu"
         }
         success{
-            echo " Yes Berhasil Run"
+            echo "Yes Berhasil Run"
         }
         failure{
-            echo " Yahhh Gagal :( "
+            echo "Yahhh Gagal :("
         }
         cleanup{
-            echo " Apapun yang terjadi tetap harus di bersihkan "
+            echo "Apapun yang terjadi tetap harus di bersihkan"
         }
     }
 }
