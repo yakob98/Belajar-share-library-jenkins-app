@@ -31,9 +31,9 @@ pipeline{
 
         stage("Test"){
             steps{
-                echo "Hello Test"
-                echo "Hello Test 2"
-                echo "Hello Test 3"
+                echo "Start test "
+                sh("./mvnw test ")
+                echo "Finish test"
                 sh('cat /etc/passwd')
                 sleep(5)
             }
@@ -41,9 +41,9 @@ pipeline{
 
         stage("Deploy"){
             steps{
-                echo "Hello Deploy"
-                echo "Hello Deploy 2"
-                echo "Hello Deploy 3"
+                echo "Start Deploy"
+                sh("./mvnw Deploy")
+                echo "Finish Deploy"
                 sleep(5)
             }
         } 
