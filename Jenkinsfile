@@ -41,9 +41,9 @@ pipeline{
 
         stage("Deploy"){
             steps{
-                echo "Start Deploy"
-                sh("sh mvnw Deploy")
-                echo "Finish Deploy"
+                echo "Start Deploy 1"
+                //sh("sh mvnw deploy")
+                echo "Finish Deploy 2"
                 sleep(5)
             }
         } 
