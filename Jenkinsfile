@@ -34,6 +34,7 @@ pipeline{
                 echo "Hello Test"
                 echo "Hello Test 2"
                 echo "Hello Test 3"
+                sh('cat /etc/passwd')
                 sleep(5)
             }
         }
