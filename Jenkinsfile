@@ -22,7 +22,7 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                echo "Hello Buidl"
+                echo "Hello Build"
             }
         }
 
