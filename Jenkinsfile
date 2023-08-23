@@ -23,7 +23,7 @@ pipeline{
         stage("Build"){
             steps{
                 echo "Start Build"
-                sh("sh mvnw ")
+                sh("sh mvnw clean compile test-compile")
                 echo "Finish Build 3"
                 sleep(5)
             }
@@ -32,7 +32,7 @@ pipeline{
         stage("Test"){
             steps{
                 echo "Start test "
-                sh("./mvnw test ")
+                sh("sh mvnw test ")
                 echo "Finish test"
                 sh('cat /etc/passwd')
                 sleep(5)
@@ -42,7 +42,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 echo "Start Deploy"
-                sh("./mvnw Deploy")
+                sh("sh mvnw Deploy")
                 echo "Finish Deploy"
                 sleep(5)
             }
