@@ -22,9 +22,9 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                echo "Hello Build"
-                echo "Hello Build 2"
-                echo "Hello Build 3"
+                echo "Start Build"
+                sh('./mvnw clean compile test-compile')
+                echo "Finish Build 3"
                 sleep(5)
             }
         }
