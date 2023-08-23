@@ -25,6 +25,7 @@ pipeline{
                 echo "Hello Build"
                 echo "Hello Build 2"
                 echo "Hello Build 3"
+                sleep(5)
             }
         }
 
@@ -33,7 +34,7 @@ pipeline{
                 echo "Hello Test"
                 echo "Hello Test 2"
                 echo "Hello Test 3"
-                
+                sleep(5)
             }
         }
 
@@ -42,7 +43,7 @@ pipeline{
                 echo "Hello Deploy"
                 echo "Hello Deploy 2"
                 echo "Hello Deploy 3"
-
+                sleep(5)
             }
         } 
     }
