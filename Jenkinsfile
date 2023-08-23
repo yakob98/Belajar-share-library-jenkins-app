@@ -23,7 +23,7 @@ pipeline{
         stage("Build"){
             steps{
                 echo "Start Build"
-                sh("./mvnw ")
+                sh("sh mvnw ")
                 echo "Finish Build 3"
                 sleep(5)
             }
