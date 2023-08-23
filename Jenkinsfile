@@ -13,11 +13,11 @@
 
 // Menargetkan agent dengan menggunakan label untuk menjalankan task
 pipeline{
-    agent any{
+    agent any //{
         // node{
         //     label "java && jenkins"
         // }
-    }
+//    }
 
     stages{
         stage("Hello"){
