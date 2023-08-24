@@ -27,6 +27,10 @@ pipeline{
         password(name: "SECRET", defaultValue: "", description: "Encrypt Key")
     }
 
+    triggers{
+        cron("* * * * *")
+    }
+
     options{
         disableConcurrentBuilds()
         // timeout(time: 10, unit: 'SECONDS')
