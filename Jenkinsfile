@@ -14,6 +14,10 @@
 // Menargetkan agent dengan menggunakan label untuk menjalankan task
 pipeline{
     agent any
+    environment{
+        AUTHOR = "Yacob Hae"
+        EMAIL = "yacobhae@gmail.com"
+    }
 //    agent any //    {
         // node{
         //     label "java && jenkins"
@@ -31,6 +35,8 @@ pipeline{
             //     }
             // }
             steps{
+                echo("Author ${AUTHOR}")
+                echo("Email ${EMAIL}")
                 echo("Start Job : ${env.JOB_NAME}")
                 echo("Start Build : ${env.BUILD_NUMBER}")
                 echo("Branch Name : ${env.BRANCH_NAME}")
