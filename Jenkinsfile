@@ -124,15 +124,23 @@ pipeline{
                     ]
                     writeJSON(file: "data.json", json: data)
                 }
-                // echo "Start test "
-                // sh("sh mvnw test ")
-                // echo "Finish test"
+                echo "Start test "
+                sh("sh mvnw test ")
+                echo "Finish test"
                 // sh('cat /etc/passwd')
                 sleep(5)
             }
         }
 
         stage("Deploy"){
+            input{
+                message "Boleh di Deploy ?"
+                ok "Tentu Saja"
+                submitter "yacob"
+                // parameters{
+                //     choice(name: "TARGET_ENV", choices: ['DEV', 'QA', 'PRD'], description: "Pilih Sosial Media yang mana?")
+                // }
+            }
             // agent{
             //     node{
             //         label "java && jenkins"
@@ -142,6 +150,7 @@ pipeline{
                 echo "Start Deploy 1"
                 //sh("sh mvnw deploy")
                 echo "Finish Deploy 2"
+                // echo "Deploy to ${TARGET_ENV}"
                 sleep(5)
             }
         } 
