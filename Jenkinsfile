@@ -29,7 +29,7 @@ pipeline{
     stages{
 
         environment{
-            APP = credential("yakob_test")
+            APP = credentials("yakob_test")
         }
 
         stage("Prepare"){
