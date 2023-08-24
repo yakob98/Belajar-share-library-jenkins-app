@@ -18,6 +18,11 @@ pipeline{
         AUTHOR = "Yacob Hae"
         EMAIL = "yacobhae@gmail.com"
     }
+
+    options{
+        disableConcurrentBuilds()
+        timeout(10, unit: 'MINUTES')
+    }
 //    agent any //    {
         // node{
         //     label "java && jenkins"
