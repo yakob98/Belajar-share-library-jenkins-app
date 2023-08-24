@@ -41,7 +41,7 @@ pipeline{
                         "firstName" : "yakob",
                         "lastName" : "hae"
                     ]
-                    writeJSON(file: "data.json", json: datas)
+                    writeJSON(file: "data.json", json: data)
                 }
                 // echo "Start test "
                 // sh("sh mvnw test ")
