@@ -13,7 +13,7 @@
 
 // Menargetkan agent dengan menggunakan label untuk menjalankan task
 pipeline{
-    agent none
+    agent any
 //    agent any //    {
         // node{
         //     label "java && jenkins"
