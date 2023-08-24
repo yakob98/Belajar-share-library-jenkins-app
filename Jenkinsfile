@@ -21,7 +21,7 @@ pipeline{
 
     options{
         disableConcurrentBuilds()
-        timeout(10, unit: 'SECONDS')
+        timeout(time: 10, unit: 'SECONDS')
     }
 //    agent any //    {
         // node{
