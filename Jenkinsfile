@@ -19,6 +19,14 @@ pipeline{
         EMAIL = "yacobhae@gmail.com"
     }
 
+    parameters{
+        string(name: "NAME", defaultValue: "Guest", description: "Siapa Nama Anda ?")
+        text(name: "DESCRIPTION", defaultValue: "Guest", description: "Siapa Anda ?")
+        booleanParam(name: "DEPLOY", defaultValue: false, description: "Butuh di Deploy ?")
+        choice(name: "SOCIAL_MEDIA", choices: ['Instagram', 'Facebook', 'Telegram'], description: "Pilih Sosial Media yang mana?")
+        password(name: "SECRET", defaultValue: "", description: "Encrypt Key")
+    }
+
     options{
         disableConcurrentBuilds()
         // timeout(time: 10, unit: 'SECONDS')
@@ -33,6 +41,24 @@ pipeline{
 
 // menambahkan stage
     stages{
+
+        stage("Parameters"){
+
+            // agent{
+            //     node{
+            //         label "java && jenkins"
+            //     }
+            // }
+
+            steps{
+                echo("Hello ${params.NAME} !")
+                echo("Your Descriptions ${params.DESCRIPTION} !")
+                echo("Your Social Media is ${params.SOCIAL_MEDIA} user")
+                echo("Need to deploy ${params.DEPLOY} to Deploy")
+                echo("Your Secret is ${params.SECRET}")
+                
+            }
+        }
 
 
 
