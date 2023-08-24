@@ -24,11 +24,11 @@ pipeline{
 // menambahkan stage
     stages{
         stage("Build"){
-            agent{
-                node{
-                    label "java && jenkins"
-                }
-            }
+            // agent{
+            //     node{
+            //         label "java && jenkins"
+            //     }
+            // }
             steps{
                 script{
                     for (int i = 0; i < 10; i++){
@@ -43,11 +43,11 @@ pipeline{
         }
 
         stage("Test"){
-            agent{
-                node{
-                    label "java && jenkins"
-                }
-            }
+            // agent{
+            //     node{
+            //         label "java && jenkins"
+            //     }
+            // }
             steps{
                 script{
                     def data = [
@@ -65,11 +65,11 @@ pipeline{
         }
 
         stage("Deploy"){
-            agent{
-                node{
-                    label "java && jenkins"
-                }
-            }
+            // agent{
+            //     node{
+            //         label "java && jenkins"
+            //     }
+            // }
             steps{
                 echo "Start Deploy 1"
                 //sh("sh mvnw deploy")
