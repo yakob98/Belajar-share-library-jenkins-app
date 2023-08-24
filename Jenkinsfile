@@ -36,10 +36,17 @@ pipeline{
 
         stage("Test"){
             steps{
-                echo "Start test "
-                sh("sh mvnw test ")
-                echo "Finish test"
-                sh('cat /etc/passwd')
+                script{
+                    def data = [
+                        "firstName" : "yakob",
+                        "lastName" : "hae"
+                    ]
+                    writeJSON(file: "data.json", json: datas)
+                }
+                // echo "Start test "
+                // sh("sh mvnw test ")
+                // echo "Finish test"
+                // sh('cat /etc/passwd')
                 sleep(5)
             }
         }
