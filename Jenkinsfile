@@ -28,11 +28,12 @@ pipeline{
 // menambahkan stage
     stages{
 
-        environment{
-            APP = credentials("yakob_test")
-        }
+
 
         stage("Prepare"){
+            environment{
+            APP = credentials("yakob_test")
+            }
             // agent{
             //     node{
             //         label "java && jenkins"
