@@ -14,7 +14,6 @@
 // Menargetkan agent dengan menggunakan label untuk menjalankan task
 pipeline{
     agent none
-
 //    agent any //    {
         // node{
         //     label "java && jenkins"
@@ -44,6 +43,11 @@ pipeline{
         }
 
         stage("Test"){
+            agent{
+                node{
+                    label "java && jenkins"
+                }
+            }
             steps{
                 script{
                     def data = [
@@ -61,6 +65,11 @@ pipeline{
         }
 
         stage("Deploy"){
+            agent{
+                node{
+                    label "java && jenkins"
+                }
+            }
             steps{
                 echo "Start Deploy 1"
                 //sh("sh mvnw deploy")
