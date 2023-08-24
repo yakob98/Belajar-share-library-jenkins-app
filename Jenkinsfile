@@ -24,11 +24,11 @@ pipeline{
 // menambahkan stage
     stages{
         stage("Build"){
-            // agent{
-            //     node{
-            //         label "java && jenkins"
-            //     }
-            // }
+            agent{
+                node{
+                    label "java && jenkins"
+                }
+            }
             steps{
                 script{
                     for (int i = 0; i < 10; i++){
