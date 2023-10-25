@@ -8,7 +8,7 @@ pipeline{
         stage("Import Hello"){
             steps{
                 script{
-                    Output.hello("Groovy")
+                    Output.hello(this, "Groovy")
                 }
             }
         }
