@@ -6,13 +6,13 @@ pipeline{
     agent any
     stages{
 
-        // stage("Maven Compile"){
-        //     steps{
-        //         script{
-        //             maven("clean compile")
-        //         }
-        //     }
-        // }
+        stage("Maven Build"){
+            steps{
+                script{
+                    maven("clean compile")
+                }
+            }
+        }
 
 
         stage("Global Variabel"){
