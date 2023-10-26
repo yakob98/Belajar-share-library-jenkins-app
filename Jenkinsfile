@@ -34,9 +34,7 @@ pipeline{
 
         stage("Maven Build"){
             steps{
-                script{
-                    sh("mvnw clean compile")
-                }
+                sh("mvnw clean compile")
             }
         }
 
