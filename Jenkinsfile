@@ -2,67 +2,69 @@
 
 import programyakob.jenkins.Output;
 
-pipeline{
-    agent any
+mavenpipeline()
 
-    options { buildDiscarder(logRotator(numToKeepStr: '5')) }
+// pipeline{
+//     agent any
 
-    stages{
+//     options { buildDiscarder(logRotator(numToKeepStr: '5')) }
 
-        stage("Global Variabel"){
-            steps{
-                script{
-                    echo(author())
-                    echo(author.name())
-                    echo(author.channel())
-                }
-            }
-        }
+//     stages{
 
-        stage("Import Hello"){
-            steps{
-                script{
-                    Output.hello(this, "Groovy")
-                }
-            }
-        }
+//         stage("Global Variabel"){
+//             steps{
+//                 script{
+//                     echo(author())
+//                     echo(author.name())
+//                     echo(author.channel())
+//                 }
+//             }
+//         }
 
-        stage("Vars Hello"){
-            steps{
-                script{
-                    hello.world()
-                }
-            }
-        }
+//         stage("Import Hello"){
+//             steps{
+//                 script{
+//                     Output.hello(this, "Groovy")
+//                 }
+//             }
+//         }
 
-        stage("Maven Build"){
-            steps{
-                script{
-                    maven(["clean", "compile", "test"])
-                }
-            }
-        }
+//         stage("Vars Hello"){
+//             steps{
+//                 script{
+//                     hello.world()
+//                 }
+//             }
+//         }
 
-        stage("Hello Data Map"){
-            steps{
-                script{
-                    hello.person([
-                        firstName : "Yacob" ,
-                        lastName : "Hae"
-                    ])
-                }
-            }
-        }
+//         stage("Maven Build"){
+//             steps{
+//                 script{
+//                     maven(["clean", "compile", "test"])
+//                 }
+//             }
+//         }
 
-        stage("Library Resource"){
-            steps{
-                script{
-                    def config = libraryResource("config/build.json")
-                    echo(config)
-                }
-            }
-        }
+//         stage("Hello Data Map"){
+//             steps{
+//                 script{
+//                     hello.person([
+//                         firstName : "Yacob" ,
+//                         lastName : "Hae"
+//                     ])
+//                 }
+//             }
+//         }
+
+//         stage("Library Resource"){
+//             steps{
+//                 script{
+//                     def config = libraryResource("config/build.json")
+//                     echo(config)
+//                 }
+//             }
+//         }
 
 
-    }
-}
+//     }
+// }
