@@ -43,6 +43,17 @@ pipeline{
             }
         }
 
+        stage("Hello Data Map"){
+            steps{
+                script{
+                    hello.person([
+                        firstName : "Yacob" ,
+                        lastNama : "Hae"
+                    ])
+                }
+            }
+        }
+
 
     }
 }
