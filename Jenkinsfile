@@ -3,7 +3,7 @@
 import programyakob.jenkins.Output;
 
 yakobpipeline([
-    type: "maven"
+    type: "bala"
 ])
 
 // mavenpipeline()
