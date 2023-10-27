@@ -6,15 +6,6 @@ pipeline{
     agent any
     stages{
 
-        stage("Maven Compile"){
-            steps{
-                script{
-                    maven("clean compile")
-                }
-            }
-        }
-
-
         stage("Global Variabel"){
             steps{
                 script{
@@ -40,5 +31,13 @@ pipeline{
                 }
             }
         }
+
+        stage("Maven Build"){
+            steps{
+                sh("./mvnw clean compile")
+            }
+        }
+
+
     }
 }
