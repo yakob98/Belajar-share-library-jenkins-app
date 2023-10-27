@@ -4,6 +4,9 @@ import programyakob.jenkins.Output;
 
 pipeline{
     agent any
+
+    options { buildDiscarder(logRotator(numToKeepStr: '5')) }
+
     stages{
 
         stage("Global Variabel"){
