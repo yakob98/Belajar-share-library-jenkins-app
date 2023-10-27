@@ -48,7 +48,7 @@ pipeline{
                 script{
                     hello.person([
                         firstName : "Yacob" ,
-                        lastNama : "Hae"
+                        lastName : "Hae"
                     ])
                 }
             }
