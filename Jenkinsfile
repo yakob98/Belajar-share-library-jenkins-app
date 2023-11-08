@@ -5,18 +5,8 @@ import programyakob.jenkins.Output;
 //yakobpipeline([
 //    type: "maven"
 //])
-pipeline{
-agent none
 
-stages{
-stage('testing'){
-steps{
 mavenpipeline()
-}
-}
-}
-}
-// mavenpipeline()
 
 // pipeline{
 //     agent any
