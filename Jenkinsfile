@@ -2,11 +2,11 @@
 
 import programyakob.jenkins.Output;
 
-yakobpipeline([
-    type: "maven"
-])
+//yakobpipeline([
+//    type: "maven"
+//])
 
-// mavenpipeline()
+ mavenpipeline()
 
 // pipeline{
 //     agent any
