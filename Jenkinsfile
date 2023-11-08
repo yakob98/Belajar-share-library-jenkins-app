@@ -6,7 +6,7 @@ import programyakob.jenkins.Output;
 //    type: "maven"
 //])
 pipeline{
-agent any
+agent none
 
 stages{
 stage('testing'){
